@@ -1,4 +1,4 @@
-name: build docs
+name: Build and Deploy Documentation
 on:
   push:
     branches:
@@ -6,13 +6,19 @@ on:
   pull_request:
     branches:
       - main
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Build and deploy documentation
+        run: mkdocs gh-deploy --force
