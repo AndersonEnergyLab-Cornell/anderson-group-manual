@@ -19,11 +19,11 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/vsrikrish
+      link: https://github.com/AndersonEnergyLab-Cornell
 
-site_name: Srikrishnan Group Lab Manual
-repo_name: srikrishnan-lab/lab-manual
-repo_url: https://github.com/srikrishnan-lab/lab-manual
+site_name: Anderson Energy Lab Manual
+repo_name: AndersonEnergyLab-Cornell/anderson-group-manual
+repo_url: https://github.com/AndersonEnergyLab-Cornell/anderson-group-manual
 
 markdown_extensions:
   - admonition
